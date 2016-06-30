@@ -164,11 +164,7 @@ export class Docker {
 
       let execOptions = {
         cwd: docker.options.currentWorkingDirectory,
-        env: {
-          DEBUG: '',
-          HOME: process.env.HOME,
-          PATH: process.env.PATH,
-        },
+        env: process.env,
         maxBuffer: 200 * 1024 * 1024,
       };
 
